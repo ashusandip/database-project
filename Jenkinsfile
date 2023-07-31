@@ -11,7 +11,7 @@ pipeline {
         stage('SonarQubeScan') {
             steps {
 		    withSonarQubeEnv('Divyanshu Arya') {
-      				sh "/usr/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=Jenkins-SonarQube -Dsonar.projectName='Jenkins-SonarQube'"
+      				sh "/home/ec2-user/apache-maven-3.8.6/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=Jenkins-SonarQube -Dsonar.projectName='Jenkins-SonarQube'"
     				}    
 		}
         }
